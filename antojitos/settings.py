@@ -48,10 +48,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'projects',#agregamos la app de proyectos
+    'projects',  # Agregamos la app de proyectos
     'rest_framework',
-    
+    'corsheaders',  # Agrega la app de CORS
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
