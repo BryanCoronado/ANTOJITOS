@@ -57,14 +57,15 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Agrega esta línea
 ]
+
 
 ROOT_URLCONF = 'antojitos.urls'
 
@@ -148,8 +149,7 @@ MEDIA_URL = '/public/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOW_ALL_ORIGINS = True  # Permitir todas las solicitudes desde cualquier origen
-# o
+
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",  # Agrega los dominios permitidos
 ]
